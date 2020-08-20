@@ -1,16 +1,14 @@
-const avanzarSemaforo = (colorActual) => {
-    if (colorActual == `verde`) {
-        return `amarillo`
-    }
-    else if (colorActual == `amarillo`) {
-        return `rojo`
+const puedeVerPelicula = (edad, tieneAutorizacion ) => {
+    if (edad >= 15 || tieneAutorizacion) {
+        return true
     }
     else {
-        return `verde`
+        return false
     }
     
 }
 
-console.log(avanzarSemaforo(`verde`))
-console.log(avanzarSemaforo(`amarillo`))
-console.log(avanzarSemaforo(`rojo`))
+console.log(puedeVerPelicula(12,false))
+console.log(puedeVerPelicula(12,true))
+console.log(puedeVerPelicula(16,false))
+console.log(puedeVerPelicula(18,true))
